@@ -1,0 +1,5 @@
+var userDogAge = prompt("Please enter your dogs age: "); 
+
+humanAgeConverter = ((userDogAge - 2)*4)+21; 
+
+alert("Your dogs age in human age is = " + humanAgeConverter);
