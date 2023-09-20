@@ -1,0 +1,13 @@
+var userName = prompt("What is your name? ") 
+
+var firstChar = userName.slice(0,1); 
+
+var firstCharCap = firstChar.toUpperCase(); 
+
+var remainChar = userName.slice(1, userName.length); 
+
+var remainCharSmall = remainChar.toLowerCase();
+
+var fullName = firstCharCap + remainCharSmall;  
+
+alert("Welcome " + fullName);

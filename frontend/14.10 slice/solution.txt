@@ -1,0 +1,5 @@
+var userText = prompt(" Please type your text below: "); 
+
+var slicedText = userText.slice(0, 250);
+
+alert(slicedText); 

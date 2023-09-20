@@ -1,0 +1,11 @@
+Problem solution: 
+---------------------
+
+var a = 3;
+var b = 8; 
+
+-- Solution --
+
+a=b; // a=8
+b=3; // b=3
+

@@ -1,0 +1,5 @@
+var userText = prompt(" Please type your text below: "); 
+
+var remainText = userText.length - 280; 
+
+alert("You have entered " + userText.length+ " characters, the remaining characters is " + remainText); 

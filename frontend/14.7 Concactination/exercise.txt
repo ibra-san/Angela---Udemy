@@ -1,0 +1,6 @@
+Concatination is the idea of joining two strings together. 
+
+var a = "food"; 
+var b = "cat" 
+
+var c= b+" " + a // c = cat food
