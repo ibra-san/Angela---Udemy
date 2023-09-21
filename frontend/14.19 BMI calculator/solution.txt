@@ -1,0 +1,14 @@
+var height = prompt("Please enter your height for BMI Calculator: "); 
+var weight = prompt("Please enter your weight for BMI Calculator: ");
+
+function bmiCalculator(h, w) {
+	
+	var bmi = w / (h * h); 
+
+return bmi
+	
+ }
+
+var bmiValue = bmiCalculator(height, weight);
+
+prompt("Your BMI value is = " + bmiValue);

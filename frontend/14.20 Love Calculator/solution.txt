@@ -1,0 +1,7 @@
+var yourName = prompt("Please enter your name: ");
+var loverName = prompt ("Please enter your lover's name: "); 
+
+var randomN = Math.random(); 
+var loveMeter = (Math.floor(randomN)+1)*100; 
+
+prompt(yourName + " and " + loverName + " are compatable by: " + loveMeter);

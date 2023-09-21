@@ -1,0 +1,9 @@
+let guestList = ["Ibrahim", "Hassan", "Ali", "Mohame"]; 
+
+let guestName = prompt("Please enter your name: "); 
+
+if(guestList.includes(guestName)) { 
+	console.log("Welcome to the party");
+} else {
+	console.log("Who is you homie");
+}
