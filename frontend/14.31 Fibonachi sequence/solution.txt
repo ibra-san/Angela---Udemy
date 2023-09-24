@@ -1,0 +1,25 @@
+function fibonacciGenerator (n) {
+//Do NOT change any of the code above 👆
+    
+    //Write your code here:
+    let output=[]; 
+    
+    if(n===1) {
+        return output=[0];
+    } else if (n===2) {
+        return output=[0,1];
+    } else {
+        output=[0,1];
+        var value = 0; 
+        while (n > 2) { 
+            value = output[output.length-1] + output[output.length-2] 
+            output.push(value); 
+            n--;
+        }
+        return output;
+    }
+    
+    //Return an array of fibonacci numbers starting from 0.
+    
+//Do NOT change any of the code below 👇
+}
