@@ -7,6 +7,23 @@ const crashSound = new Audio("./sounds/crash.mp3");
 const kickBassSound = new Audio("./sounds/kick-bass.mp3");
 const snareSound = new Audio("./sounds/snare.mp3");
 
+window.addEventListener("keypress", (event) => {
+    if(event.key==="w") {
+        tom1Sound.play();
+    } else if (event.key==='a') {
+        tom2Sound.play();
+    } else if (event.key==='s') { 
+        tom3Sound.play();
+    } else if (event.key==='d') { 
+        tom4Sound.play();
+    } else if (event.key==='j') { 
+        snareSound.play();
+    } else if (event.key === 'k') { 
+        crashSound.play();
+    } else if (event.key === 'l') { 
+        kickBassSound.play();
+    }
+})
 
 for (let i=0; i<= allDrums.length; i++) { 
     if(allDrums[i].textContent === "w") { 
@@ -14,6 +31,7 @@ for (let i=0; i<= allDrums.length; i++) {
         allDrums[i].addEventListener("click", () => { 
             tom1Sound.play();
         })
+        
     }else if(allDrums[i].textContent === "a") { 
         allDrums[i].style.backgroundImage = "url('./images/tom2.png')"
         allDrums[i].addEventListener("click", () => { 
