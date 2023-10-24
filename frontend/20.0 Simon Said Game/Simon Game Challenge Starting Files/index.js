@@ -19,9 +19,9 @@ $(window).on("load", function () {
     let patternNum = Math.floor(((Math.random())*4)+1);
     let level = 1; 
     patternArray[0] = patternNum;
+    let userPatternArray = [];
     let runonce = 1;
-    // setting the randoms numbers to btns
-    
+
 
 
     $(window).on("keypress", function () { 
@@ -29,11 +29,26 @@ $(window).on("load", function () {
         while (runonce >= 1) {
             $("#level-title").text(`Level ${level}`);
             // Run this once after the first press
-            switch(patternNum) {
+            
+            initialBtnFlash(patternNum)
+            btnSetsValue(userPatternArray)
+            runonce--;
+        }
+        
+        
+    })
+
+    
+
+})
+
+
+
+function initialBtnFlash (patternNum) { 
+    switch(patternNum) {
                 case 1: {
                     $("#green").fadeOut(500); 
                     $("#green").fadeIn(500); 
-                    console.log("Green")
                     break;
                 } case 2: { 
                     $("#red").fadeOut(500); 
@@ -49,15 +64,40 @@ $(window).on("load", function () {
                     break
                 }
             }
+}
 
-            runonce--;
-        }
+function btnSetsValue (userPatternArray) { 
+
+    $("#green").click(function () { 
+        userPatternArray.push(1);
+        console.log(userPatternArray)
+    })
+
+    $("#red").click(function () { 
+        userPatternArray.push(2)
+        console.log(userPatternArray)
+    })
+
+    $("#yellow").click(function () { 
+        userPatternArray.push(3)
+        console.log(userPatternArray)
         
     })
 
-})
-
-
-function play () { 
+    $("#blue").click(function () { 
+        userPatternArray.push(4)
+        console.log(userPatternArray)
+    })
     
 }
+
+
+
+
+
+
+/*
+    initialBtnFlash is a function that flashes a random button at level 1 of the game
+
+    2. Push a value to the array depending on the button clicked.
+*/
